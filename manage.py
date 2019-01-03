@@ -23,7 +23,7 @@ app.app_context().push()
 
 @manager.command
 def run():
-    app.run()
+    app.run(host='0.0.0.0', debug=True, port=5000)
 
 @manager.command
 def test():
