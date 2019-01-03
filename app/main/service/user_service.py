@@ -30,7 +30,8 @@ def save_new_user(data):
 
 
 def get_all_users():
-    return User.query.all()
+    #return User.query.order_by('username').desc().all()
+    return User.query.order_by(User.username.desc()).all()
 
 
 def get_a_user(public_id):
